@@ -1,0 +1,17 @@
+replicaCount: 1
+image:
+  repository: zelixplore/chatoverlay-backend
+  pullPolicy: IfNotPresent
+  tag: ""
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+podAnnotations: {}
+podLabels: {}
+resources: 
+  limits:
+    cpu: 100m
+    memory: 128Mi
+envFrom:
+- secretRef:
+    name: beep-secret

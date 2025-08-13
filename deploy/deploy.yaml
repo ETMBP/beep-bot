@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beep
+  namespace: beep
+spec:
+  selector:
+    matchLabels:
+      app: beep
+  template:
+    metadata:
+      labels:
+        app: beep
+    spec:
+      containers:
+      - name: beep
+        image: <Image>
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
