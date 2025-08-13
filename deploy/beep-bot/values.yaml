@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: zelixplore/chatoverlay-backend
+  repository: zelixplore/beep-bot
   pullPolicy: IfNotPresent
   tag: ""
 imagePullSecrets: []
