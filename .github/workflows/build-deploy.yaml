@@ -45,6 +45,6 @@ jobs:
           --namespace beep \
           --create-namespace \
           --reuse-values \
-          --set image-tag $IMG_TAG \
+          --set image.tag ${{ env.IMG_TAG }} \
           --values ./deploy/beep-bot/values.yaml \
           ./deploy/beep-bot
