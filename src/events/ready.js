@@ -44,9 +44,9 @@ async function randomBeep(client) {
 
     do {
         const waitMs = Math.floor(Math.random() * (maxMs - minMs + 1) + minMs);
-        getRandomChannel(client);
         console.log(`Battery will last ${(waitMs / 1000) / 60}`)
         await new Promise(r => setTimeout(r, waitMs));
+        getRandomChannel(client);
         console.log(waitMs)
     } while (true);
 }
