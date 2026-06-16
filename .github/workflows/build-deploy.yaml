@@ -8,7 +8,7 @@ on:
 jobs:
   build_img:
     name: it is lego time
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     permissions:
       contents: read
     steps:
