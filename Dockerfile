@@ -1,8 +1,9 @@
 FROM node:24-alpine
 
-RUN mkdir -p ~/app
+USER root
+RUN mkdir -p /app
 
-WORKDIR ~/app
+WORKDIR /app
 COPY ./src/package*.json ./
 RUN chown node:node -R ./
 USER node
